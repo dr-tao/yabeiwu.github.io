@@ -276,8 +276,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/phonopy-installation/" itemprop="url">
-                  How to install phonopy with/without root access?
+                <a class="post-title-link" href="/2017/08/06/sublime-add-right-click-menu/" itemprop="url">
+                  how to add sublime to right click menu?
                 </a>
               
             
@@ -308,7 +308,7 @@
 
           
           
-             <span id="/2017/08/06/phonopy-installation/" class="leancloud_visitors" data-flag-title="How to install phonopy with/without root access?">
+             <span id="/2017/08/06/sublime-add-right-click-menu/" class="leancloud_visitors" data-flag-title="how to add sublime to right click menu?">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -332,56 +332,42 @@
       
         
           
-            <p>This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:</p>
-<hr>
-<h3 id="1-root-account"><a href="#1-root-account" class="headerlink" title="1, root account:"></a>1, root account:</h3><p>if you are a root account, everything becomes much easier for you. All you just need to do is the following:<br>install python development packages:</p>
-<pre><code>numpy, numpy-dev, matplotlib, python-lxml, python-yaml
-</code></pre><p>if you are using a Ubuntu/Debian system, you just need to：</p>
-<pre><code>sudo aptitude install python-dev python-numpy 
-\python-matplotlib python-tk python-lxml python-yaml 
-</code></pre><p>And after that, go to the phonopy directory, and using command:</p>
-<pre><code>sudo python setup.py install
-</code></pre><p>Then edit your ~/.bashrc file, such as:</p>
-<pre><code>export PATH=~/opt/phonopy-0.6.1:$PATH
-</code></pre><hr>
-<h3 id="2-without-root-access"><a href="#2-without-root-access" class="headerlink" title="2, without root access:"></a>2, without root access:</h3><p>Things become much more complicated, but don’t worry, we can handle this.<br>1, you should install your local python program.<br>install local python without root access (see the following, copy from <a href="http://www.csuldw.com/2016/05/06/2016-05-06-python-and-pip/" target="_blank" rel="external">this link</a>)<br>choose your own python version and your installed directory.</p>
-<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xzf Python-2.7.5.tgz
-cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
-./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
-make
-make install
-</code></pre><p>2, install setuptools<br>setuptools is prepared for pip program, just using following command:</p>
-<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xzf Python-2.7.5.tgz
-cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
-./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
-make
-make install
-</code></pre><p>3, install pip<br>keep remembering that you should use your own python program.</p>
-<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xzf Python-2.7.5.tgz
-cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
-./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
-make
-make install
-</code></pre><p>4, install related library<br>first goes to /your/path/to/python/bin directory</p>
-<pre><code>cd /home/liudiwei/software/python27/bin/
-./pip install simplejson
-./pip install redis
-./pip install numpy
-./pip install scipy
-./pip install sklearn
-./pip install matplotlib
-</code></pre><p>Because your system already has a python program, so you can rename your python to a different one, by changing the ~/.bashrc file</p>
-<pre><code>alias mypython=&apos;/home/liudiwei/software/python27/bin/python&apos;
-</code></pre><p>5, install phonopy<br>using your local python to install the phonopy, and don’t specify anything.</p>
-<pre><code>mypython setup.py install
-</code></pre><p>After all the installation, have fun in using phonopy.</p>
+            <p>I found this solution from this <a href="https://my.oschina.net/adairs/blog/466777" target="_blank" rel="external">link</a></p>
+<h3 id="Why-we-should-do-this"><a href="#Why-we-should-do-this" class="headerlink" title="Why we should do this?"></a>Why we should do this?</h3><p>For convenience, i’d like to use sublime sometimes as my texteditor, not as a default one. So it’s better to add sublime to the right click menu. And how to do this?</p>
+<h3 id="Method-1-Installation-recomended"><a href="#Method-1-Installation-recomended" class="headerlink" title="Method 1: Installation (recomended)"></a>Method 1: Installation (recomended)</h3><p>copy the following scipts to the file named “sublime_addright.inf”, and put the file in your directory of sublime. And then right click the file to install it.<br>PS: you should make sure that the file is not hiden in your system due to the format of this file.</p>
+<pre><code>[Version]
+Signature=&quot;$Windows NT$&quot;
 
+[DefaultInstall]
+AddReg=SublimeText3
+
+[SublimeText3]
+hkcr,&quot;*\\shell\\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
+hkcr,&quot;*\\shell\\SublimeText3\\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot; %%*&quot;
+hkcr,&quot;Directory\shell\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
+hkcr,&quot;*\\shell\\SublimeText3&quot;,&quot;Icon&quot;,0x20000,&quot;%1%\sublime_text.exe, 0&quot;
+hkcr,&quot;Directory\shell\SublimeText3\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot;&quot;
+</code></pre><h3 id="Method-2-Modify-the-regitry"><a href="#Method-2-Modify-the-regitry" class="headerlink" title="Method 2: Modify the regitry"></a>Method 2: Modify the regitry</h3><p>Copy the following codes to file named “sublime_addright.reg”, and then double click on this file.<br>PS: you should change the directory of sublime to your own system.</p>
+<pre><code>Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\*\shell\SublimeText3]
+@=&quot;Edit with Sublime&quot;
+&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\*\shell\SublimeText3\command]
+@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
+@=&quot;Edit with Sublime&quot;
+&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3\command]
+@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
+</code></pre><h3 id="How-to-delete-the-right-click-menu-if-you-don’t-want-it"><a href="#How-to-delete-the-right-click-menu-if-you-don’t-want-it" class="headerlink" title="How to delete the right click menu if you don’t want it?"></a>How to delete the right click menu if you don’t want it?</h3><p>Copy the following codes to the file named “sublime_delright.reg”, and put it in your sublime directory, and then double click on it.</p>
+<pre><code>Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT\*\shell\SublimeText3]
+[-HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
+</code></pre>
           
         
       
@@ -749,8 +735,8 @@ Direct
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/vasp-charged-system/" itemprop="url">
-                  How does VASP deal with charged systems?
+                <a class="post-title-link" href="/2017/08/06/vasp-wannier-guide/" itemprop="url">
+                  VASP+Wannier90--An Introduction
                 </a>
               
             
@@ -781,7 +767,7 @@ Direct
 
           
           
-             <span id="/2017/08/06/vasp-charged-system/" class="leancloud_visitors" data-flag-title="How does VASP deal with charged systems?">
+             <span id="/2017/08/06/vasp-wannier-guide/" class="leancloud_visitors" data-flag-title="VASP+Wannier90--An Introduction">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -805,8 +791,20 @@ Direct
       
         
           
-            <p><em>This Should be a Big Project!!! </em></p>
-<h3 id="Why-we-need-that"><a href="#Why-we-need-that" class="headerlink" title="Why we need that?"></a>Why we need that?</h3><h3 id="How-to-realize"><a href="#How-to-realize" class="headerlink" title="How to realize?"></a>How to realize?</h3>
+            <h4 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h4><ol>
+<li>wannier90-1.2 compile<br>Go to <a href="http://www.wannier.org/download.html" target="_blank" rel="external">http://www.wannier.org/download.html</a> and download the wannier90-1.2 version, not the newest version.<br>Modify ‘make.sys’ file according to your system, and then<br>make all</li>
+<li><p>Recompile VASP<br>Modify the following parts:</p>
+<p> LIB     = -L../vasp.5.lib -ldmy  \</p>
+<pre><code>../vasp.5.lib/linpack_double.o \
+../wannier90-1.2/libwannier.a $(SCA) (LAPACK)(LAPACK)(BLAS)
+</code></pre><p> CPP    = $(CPP_) -DMPI  -DHOST=\”LinuxIFC\” -DIFC \</p>
+<pre><code>-DCACHE_SIZE=4000 -DPGF90 -Davoidalloc  \
+-DMPI_BLOCK=8000 -Duse_collective -DscaLAPACK -DNGZhalf &lt;span style=&quot;color:red&quot;&gt;-DVASP2WANNIER90&lt;/span&gt;
+</code></pre></li>
+</ol>
+<p>Then </p>
+<pre><code>make vasp
+</code></pre><h4 id="Running-Example"><a href="#Running-Example" class="headerlink" title="Running Example"></a>Running Example</h4>
           
         
       
@@ -964,8 +962,8 @@ Direct
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/vasp-installation-and-errors/" itemprop="url">
-                  VASP Installations and Some Errors
+                <a class="post-title-link" href="/2017/08/06/phonopy-installation/" itemprop="url">
+                  How to install phonopy with/without root access?
                 </a>
               
             
@@ -996,7 +994,7 @@ Direct
 
           
           
-             <span id="/2017/08/06/vasp-installation-and-errors/" class="leancloud_visitors" data-flag-title="VASP Installations and Some Errors">
+             <span id="/2017/08/06/phonopy-installation/" class="leancloud_visitors" data-flag-title="How to install phonopy with/without root access?">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1020,33 +1018,55 @@ Direct
       
         
           
-            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>We just take the vasp.5.4.4 as an example.</p>
-<ol>
-<li><p>go to your vasp directory, </p>
-<pre><code>copy arch/makefile.include.name makefile.include
-</code></pre></li>
-<li><p>modify makefile.include file according to your system environment by adding</p>
-<pre><code>MKLROOT = /path/to/your/mkl/directory
-</code></pre></li>
-<li><p>make all</p>
-</li>
-</ol>
-<h3 id="Errors-and-Solutions"><a href="#Errors-and-Solutions" class="headerlink" title="Errors and Solutions"></a>Errors and Solutions</h3><ol>
-<li><p>errors as following:</p>
-<pre><code>locproj.o: In function `locproj_mp_lprj_reader_&apos;:
-locproj.f90:(.text+0xa5): undefined reference to `parse_file_C&apos;
-locproj.f90:(.text+0xb9): undefined reference to `free_parser_C&apos;
-locproj.f90:(.text+0x254): undefined reference to `fill_basis_info_C&apos;
-locproj.f90:(.text+0x26e): undefined reference to `free_parser_C&apos;
-make[2]: *** [vasp] Error 1
-make[2]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
-cp: cannot stat ‘vasp’: No such file or directory
-make[1]: *** [all] Error 1
-make[1]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
-make: *** [std] Error 2
-</code></pre></li>
-</ol>
-<p>2. </p>
+            <p>This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:</p>
+<hr>
+<h3 id="1-root-account"><a href="#1-root-account" class="headerlink" title="1, root account:"></a>1, root account:</h3><p>if you are a root account, everything becomes much easier for you. All you just need to do is the following:<br>install python development packages:</p>
+<pre><code>numpy, numpy-dev, matplotlib, python-lxml, python-yaml
+</code></pre><p>if you are using a Ubuntu/Debian system, you just need to：</p>
+<pre><code>sudo aptitude install python-dev python-numpy 
+\python-matplotlib python-tk python-lxml python-yaml 
+</code></pre><p>And after that, go to the phonopy directory, and using command:</p>
+<pre><code>sudo python setup.py install
+</code></pre><p>Then edit your ~/.bashrc file, such as:</p>
+<pre><code>export PATH=~/opt/phonopy-0.6.1:$PATH
+</code></pre><hr>
+<h3 id="2-without-root-access"><a href="#2-without-root-access" class="headerlink" title="2, without root access:"></a>2, without root access:</h3><p>Things become much more complicated, but don’t worry, we can handle this.<br>1, you should install your local python program.<br>install local python without root access (see the following, copy from <a href="http://www.csuldw.com/2016/05/06/2016-05-06-python-and-pip/" target="_blank" rel="external">this link</a>)<br>choose your own python version and your installed directory.</p>
+<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+tar -xzf Python-2.7.5.tgz
+cd Python-2.7.5
+mkdir -p /home/liudiwei/software/python27 
+./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
+make
+make install
+</code></pre><p>2, install setuptools<br>setuptools is prepared for pip program, just using following command:</p>
+<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+tar -xzf Python-2.7.5.tgz
+cd Python-2.7.5
+mkdir -p /home/liudiwei/software/python27 
+./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
+make
+make install
+</code></pre><p>3, install pip<br>keep remembering that you should use your own python program.</p>
+<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+tar -xzf Python-2.7.5.tgz
+cd Python-2.7.5
+mkdir -p /home/liudiwei/software/python27 
+./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
+make
+make install
+</code></pre><p>4, install related library<br>first goes to /your/path/to/python/bin directory</p>
+<pre><code>cd /home/liudiwei/software/python27/bin/
+./pip install simplejson
+./pip install redis
+./pip install numpy
+./pip install scipy
+./pip install sklearn
+./pip install matplotlib
+</code></pre><p>Because your system already has a python program, so you can rename your python to a different one, by changing the ~/.bashrc file</p>
+<pre><code>alias mypython=&apos;/home/liudiwei/software/python27/bin/python&apos;
+</code></pre><p>5, install phonopy<br>using your local python to install the phonopy, and don’t specify anything.</p>
+<pre><code>mypython setup.py install
+</code></pre><p>After all the installation, have fun in using phonopy.</p>
 
           
         
@@ -1096,8 +1116,8 @@ make: *** [std] Error 2
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/sublime-add-right-click-menu/" itemprop="url">
-                  how to add sublime to right click menu?
+                <a class="post-title-link" href="/2017/08/06/vasp-charged-system/" itemprop="url">
+                  How does VASP deal with charged systems?
                 </a>
               
             
@@ -1128,7 +1148,7 @@ make: *** [std] Error 2
 
           
           
-             <span id="/2017/08/06/sublime-add-right-click-menu/" class="leancloud_visitors" data-flag-title="how to add sublime to right click menu?">
+             <span id="/2017/08/06/vasp-charged-system/" class="leancloud_visitors" data-flag-title="How does VASP deal with charged systems?">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1152,42 +1172,8 @@ make: *** [std] Error 2
       
         
           
-            <p>I found this solution from this <a href="https://my.oschina.net/adairs/blog/466777" target="_blank" rel="external">link</a></p>
-<h3 id="Why-we-should-do-this"><a href="#Why-we-should-do-this" class="headerlink" title="Why we should do this?"></a>Why we should do this?</h3><p>For convenience, i’d like to use sublime sometimes as my texteditor, not as a default one. So it’s better to add sublime to the right click menu. And how to do this?</p>
-<h3 id="Method-1-Installation-recomended"><a href="#Method-1-Installation-recomended" class="headerlink" title="Method 1: Installation (recomended)"></a>Method 1: Installation (recomended)</h3><p>copy the following scipts to the file named “sublime_addright.inf”, and put the file in your directory of sublime. And then right click the file to install it.<br>PS: you should make sure that the file is not hiden in your system due to the format of this file.</p>
-<pre><code>[Version]
-Signature=&quot;$Windows NT$&quot;
-
-[DefaultInstall]
-AddReg=SublimeText3
-
-[SublimeText3]
-hkcr,&quot;*\\shell\\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
-hkcr,&quot;*\\shell\\SublimeText3\\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot; %%*&quot;
-hkcr,&quot;Directory\shell\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
-hkcr,&quot;*\\shell\\SublimeText3&quot;,&quot;Icon&quot;,0x20000,&quot;%1%\sublime_text.exe, 0&quot;
-hkcr,&quot;Directory\shell\SublimeText3\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot;&quot;
-</code></pre><h3 id="Method-2-Modify-the-regitry"><a href="#Method-2-Modify-the-regitry" class="headerlink" title="Method 2: Modify the regitry"></a>Method 2: Modify the regitry</h3><p>Copy the following codes to file named “sublime_addright.reg”, and then double click on this file.<br>PS: you should change the directory of sublime to your own system.</p>
-<pre><code>Windows Registry Editor Version 5.00
-[HKEY_CLASSES_ROOT\*\shell\SublimeText3]
-@=&quot;Edit with Sublime&quot;
-&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
-
-[HKEY_CLASSES_ROOT\*\shell\SublimeText3\command]
-@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
-
-
-[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
-@=&quot;Edit with Sublime&quot;
-&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
-
-[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3\command]
-@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
-</code></pre><h3 id="How-to-delete-the-right-click-menu-if-you-don’t-want-it"><a href="#How-to-delete-the-right-click-menu-if-you-don’t-want-it" class="headerlink" title="How to delete the right click menu if you don’t want it?"></a>How to delete the right click menu if you don’t want it?</h3><p>Copy the following codes to the file named “sublime_delright.reg”, and put it in your sublime directory, and then double click on it.</p>
-<pre><code>Windows Registry Editor Version 5.00
-[-HKEY_CLASSES_ROOT\*\shell\SublimeText3]
-[-HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
-</code></pre>
+            <p><em>This Should be a Big Project!!! </em></p>
+<h3 id="Why-we-need-that"><a href="#Why-we-need-that" class="headerlink" title="Why we need that?"></a>Why we need that?</h3><h3 id="How-to-realize"><a href="#How-to-realize" class="headerlink" title="How to realize?"></a>How to realize?</h3>
           
         
       
@@ -1510,8 +1496,8 @@ table th:nth-of-type(2) {
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/vasp-wannier-guide/" itemprop="url">
-                  VASP+Wannier90--An Introduction
+                <a class="post-title-link" href="/2017/08/06/vasp-installation-and-errors/" itemprop="url">
+                  VASP Installations and Some Errors
                 </a>
               
             
@@ -1542,7 +1528,7 @@ table th:nth-of-type(2) {
 
           
           
-             <span id="/2017/08/06/vasp-wannier-guide/" class="leancloud_visitors" data-flag-title="VASP+Wannier90--An Introduction">
+             <span id="/2017/08/06/vasp-installation-and-errors/" class="leancloud_visitors" data-flag-title="VASP Installations and Some Errors">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1566,20 +1552,34 @@ table th:nth-of-type(2) {
       
         
           
-            <h4 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h4><ol>
-<li>wannier90-1.2 compile<br>Go to <a href="http://www.wannier.org/download.html" target="_blank" rel="external">http://www.wannier.org/download.html</a> and download the wannier90-1.2 version, not the newest version.<br>Modify ‘make.sys’ file according to your system, and then<br>make all</li>
-<li><p>Recompile VASP<br>Modify the following parts:</p>
-<p> LIB     = -L../vasp.5.lib -ldmy  \</p>
-<pre><code>../vasp.5.lib/linpack_double.o \
-../wannier90-1.2/libwannier.a $(SCA) (LAPACK)(LAPACK)(BLAS)
-</code></pre><p> CPP    = $(CPP_) -DMPI  -DHOST=\”LinuxIFC\” -DIFC \</p>
-<pre><code>-DCACHE_SIZE=4000 -DPGF90 -Davoidalloc  \
--DMPI_BLOCK=8000 -Duse_collective -DscaLAPACK -DNGZhalf &lt;span style=&quot;color:red&quot;&gt;-DVASP2WANNIER90&lt;/span&gt;
+            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>We just take the vasp.5.4.4 as an example.</p>
+<ol>
+<li><p>go to your vasp directory, </p>
+<pre><code>copy arch/makefile.include.name makefile.include
+</code></pre></li>
+<li><p>modify makefile.include file according to your system environment by adding</p>
+<pre><code>MKLROOT = /path/to/your/mkl/directory
+</code></pre></li>
+<li><p>make all</p>
+</li>
+</ol>
+<h3 id="Errors-and-Solutions"><a href="#Errors-and-Solutions" class="headerlink" title="Errors and Solutions"></a>Errors and Solutions</h3><ol>
+<li><p>errors as following:</p>
+<pre><code>locproj.o: In function `locproj_mp_lprj_reader_&apos;:
+locproj.f90:(.text+0xa5): undefined reference to `parse_file_C&apos;
+locproj.f90:(.text+0xb9): undefined reference to `free_parser_C&apos;
+locproj.f90:(.text+0x254): undefined reference to `fill_basis_info_C&apos;
+locproj.f90:(.text+0x26e): undefined reference to `free_parser_C&apos;
+make[2]: *** [vasp] Error 1
+make[2]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
+cp: cannot stat ‘vasp’: No such file or directory
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
+make: *** [std] Error 2
 </code></pre></li>
 </ol>
-<p>Then </p>
-<pre><code>make vasp
-</code></pre><h4 id="Running-Example"><a href="#Running-Example" class="headerlink" title="Running Example"></a>Running Example</h4>
+<p>2. </p>
+
           
         
       
@@ -1758,7 +1758,7 @@ table th:nth-of-type(2) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
