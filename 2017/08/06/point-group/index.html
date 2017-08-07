@@ -1,0 +1,925 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Physics," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="IntroductionPoint group symmetry is an important property of molecules widely used in some branches of chemistry: spectroscopy, quantum chemistry and crystallography.An individual point group is repre">
+<meta name="keywords" content="Physics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Point Group Introduction">
+<meta property="og:url" content="http://yoursite.com/2017/08/06/point-group/index.html">
+<meta property="og:site_name" content="Yabei Wu">
+<meta property="og:description" content="IntroductionPoint group symmetry is an important property of molecules widely used in some branches of chemistry: spectroscopy, quantum chemistry and crystallography.An individual point group is repre">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/point_group_flowchart.png">
+<meta property="og:updated_time" content="2017-07-25T04:08:57.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Point Group Introduction">
+<meta name="twitter:description" content="IntroductionPoint group symmetry is an important property of molecules widely used in some branches of chemistry: spectroscopy, quantum chemistry and crystallography.An individual point group is repre">
+<meta name="twitter:image" content="http://yoursite.com/images/point_group_flowchart.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/06/point-group/"/>
+
+
+  <title> Point Group Introduction | Yabei Wu </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Yabei Wu</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to yabei's home</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-publications">
+          <a href="/publications" rel="section">
+            
+            Publications
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-research">
+          <a href="/research" rel="section">
+            
+            Research
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Point Group Introduction
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
+              2017-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+           <span>&nbsp; | &nbsp;
+           <span id="busuanzi_value_page_pv" ></span>次阅读
+           </span>    
+          
+          
+          
+          
+
+          
+          
+             <span id="/2017/08/06/point-group/" class="leancloud_visitors" data-flag-title="Point Group Introduction">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Point group symmetry is an important property of molecules widely used in some branches of chemistry: spectroscopy, quantum chemistry and crystallography.<br>An individual point group is represented by a set of symmetry operations (which will further discussed in the following part):</p>
+<ol>
+<li>E - the identity operation</li>
+<li>C<sub>n</sub> - rotation by 2蟺/n angle *</li>
+<li>S<sub>n</sub> - improper rotation (rotation by 2蟺/n angle and reflection in the plane perpendicular to the axis)</li>
+<li>蟽<sub>h</sub> - horizontal reflection plane (perpendicular to the principal axis) **</li>
+<li>蟽<sub>v</sub> - vertical reflection plane (contains the principal axis)</li>
+<li>蟽<sub>d</sub> - diagonal reflection plane (contains the principal axis and bisect the angle between two C2 axes perpendicular to the principal axis)<br>in which n is an integer and the principal axis is a C<sub>n</sub> axis with the biggest n.<br>Molecule belongs to a symmetry point group if it is unchanged under all the symmetry operations of this group.</li>
+</ol>
+<p>Certain properties of the molecule (vibrational, electronic and vibronic states, normal vibrational modes, orbitals) may behave the same way or differently under the symmetry operations of the molecule point group. This behavior is described by the irreducible representation(irrep, character). All irreducible representations of the symmetry point group may be found in the corresponding character table. Molecular property belongs to the certain irreducible representation if it changes undersymmetry operations exactly as it is specified for this irreducible representation in the character table.</p>
+<p>If some molecular property A is a product of other properties B and C, the character of A is a product of B and C characters and may be determined from the character product table.</p>
+<p>In general assignment of a character (irriducible representation) to a given molecular property depends on the molecular orientation. To make this assignment unambiguous Mulliken developed conventions for symmetry notations which became widely accepted.</p>
+<p>Actually, there are some links which are very helpful to help you understanding the point group, as<br>1, <a href="http://symmetry.otterbein.edu/index.html" target="_blank" rel="external">Symmetry Resources at Otterbein University</a><br>2, <a href="http://www.webqc.org/symmetry.php" target="_blank" rel="external">Point Group Symmetry Character Tables</a></p>
+<h3 id="Symmetry-Operations-and-Elements"><a href="#Symmetry-Operations-and-Elements" class="headerlink" title="Symmetry Operations and Elements"></a>Symmetry Operations and Elements</h3><h4 id="Table-of-symmetry-elements"><a href="#Table-of-symmetry-elements" class="headerlink" title="Table of symmetry elements"></a>Table of symmetry elements</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">symbol</th>
+<th style="text-align:center">element</th>
+<th style="text-align:right">operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">蟽</td>
+<td style="text-align:center">symmetry plane</td>
+<td style="text-align:right">refection through plane</td>
+</tr>
+<tr>
+<td style="text-align:left">i</td>
+<td style="text-align:center">inversion center</td>
+<td style="text-align:right">inversion: every point x,y,z translated to -x,-y,-z</td>
+</tr>
+<tr>
+<td style="text-align:left">C<sub>n</sub></td>
+<td style="text-align:center">proper axis</td>
+<td style="text-align:right">rotation about axis by 360/n degrees</td>
+</tr>
+<tr>
+<td style="text-align:left">S<sub>n</sub></td>
+<td style="text-align:center">improper axis</td>
+<td style="text-align:right">1. rotation by 360/n degrees <br>2. reflection through plane perpendicular to rotation axis<br></td>
+</tr>
+</tbody>
+</table>
+<p>In the following, we will discuss each of the operation in details</p>
+<h4 id="Identity-E"><a href="#Identity-E" class="headerlink" title="Identity (E)"></a>Identity (E)</h4><p>The identity operation is the simplest of all – do nothing! It may seem pointless to have a symmetry operation that consists of doing nothing, but it is very important. All objects (and therefore all molecules) at the very least have the identity element. There are many molecules that have no other symmetry. </p>
+<h4 id="Reflection-蟽"><a href="#Reflection-蟽" class="headerlink" title="Reflection (蟽)"></a>Reflection (蟽)</h4><p>The reflection operation can be pictured as follows: take each atom in the molecule and move it toward the reflection plane along a line perpendicular to that plane. Continue moving the atom through the plane to a point equidistant from the plane on the opposite side of the plane. If the resulting configuation is indistinguishable from the original, we say there exists a symmetry plane in the molecule.<br>Note the differences in the following examples:</p>
+<ol>
+<li>The <a href="https://en.wikipedia.org/wiki/Ammonia" target="_blank" rel="external"><em>ammonia</em></a> molecule contains three identical reflection planes. All are designated as vertical symmetry planes (蟽<sub>v</sub>) because they contain the principle rotation axis.</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Water" target="_blank" rel="external"><em>water</em></a> molecule contains two different reflection planes.</li>
+<li>And <a href="https://en.wikipedia.org/wiki/Benzene" target="_blank" rel="external"><em>benzene</em></a> contains a total of seven reflection planes, one horizontal plane (蟽<sub>h</sub>) and six vertical planes (蟽<sub>v</sub> and 蟽<sub>d</sub>).</li>
+</ol>
+<h4 id="The-Inversion-Operation-i"><a href="#The-Inversion-Operation-i" class="headerlink" title="The Inversion Operation (i)"></a>The Inversion Operation (i)</h4><p>The inversion operation occurs through a single point called the inversion center, i, located at the center of the molecule. (Note that the inversion center may or may not coincide with an atom in the molecule.) Each atom in the molecule is moved along a straight line through the inversion center to a point an equal distance from the inversion center. If the resulting configuation is indistinguishable from the original, we say there exists an inversion center in the molecule.</p>
+<p>Each of the following molecules contains an inversion center:</p>
+<ol>
+<li>The tetrachloroplatinate(II) ion</li>
+<li><a href="https://en.wikipedia.org/wiki/Benzene" target="_blank" rel="external"><em>benzene</em></a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ethane" target="_blank" rel="external"><em>Ethane</em></a> (staggered conformation)</li>
+</ol>
+<h4 id="Proper-Rotation-Cn"><a href="#Proper-Rotation-Cn" class="headerlink" title="Proper Rotation (Cn)"></a>Proper Rotation (C<sub>n</sub>)</h4><p>The rotation operations (both proper and improper) occur with respect to line called an axis of rotation. A proper rotation is performed by rotating the molecule 360脗掳/n, where n is the order of the axis. If the resulting configuation is indistinguishable from the original, we say there exists an n-fold proper rotation axis (or C<sub>n</sub> axis) in the molecule.</p>
+<p>Each of the following molecules contains one or more proper axes:</p>
+<ol>
+<li>The <a href="https://en.wikipedia.org/wiki/Water" target="_blank" rel="external"><em>water</em></a> molecule contains a C<sub>2</sub> axis</li>
+<li><a href="https://en.wikipedia.org/wiki/Ethane" target="_blank" rel="external"><em>Ethane</em></a> contains both C<sub>2</sub> and C<sub>3</sub> axes</li>
+<li>Proper rotation axes for water:</li>
+</ol>
+<h4 id="Improper-Rotation-Sn"><a href="#Improper-Rotation-Sn" class="headerlink" title="Improper Rotation (Sn)"></a>Improper Rotation (S<sub>n</sub>)</h4><p>An improper rotation is performed by rotating the molecule 360脗掳/n followed by reflection through the plane perpendicular to the rotation axis. If the resulting configuation is indistinguishable from the original, we say there exists an n-fold improper rotation axis (or S<sub>n</sub> axis) in the molecule.</p>
+<p>Each of the following molecules contains one or more improper axes:</p>
+<ol>
+<li>Staggered ethane contains an S<sub>6</sub> axis</li>
+<li>Methane contains three S<sub>4</sub> axes</li>
+</ol>
+<h3 id="Symmetry-Classification-of-Molecules-Point-Groups"><a href="#Symmetry-Classification-of-Molecules-Point-Groups" class="headerlink" title="Symmetry Classification of Molecules - Point Groups"></a>Symmetry Classification of Molecules - Point Groups</h3><p>For molecule or any other objects, there should have certain combinations of symmetry elements in specified molecule. Therefore we group together molecules that possess the same symmetry elements and classify molecules according to their symmetry. These groups of symmetry elements are called point groups (due to the fact that there is at least one point in space that remains unchanged no matter which symmetry operation from the group is applied). There are two systems of notation for labelling symmetry groups, called the <strong>Schoenflies</strong> and <strong>Hermann-Mauguin</strong> (or International) systems. The symmetry of individual molecules is usually described using the Schoenflies notation, and we shall be using this notation for the remainder of the course.<br><em>Note: Some of the point groups share their names with symmetry operations, so be careful you don’t mix up the two. It is usually clear from the context which one is being refered to.</em><br>The molecular point groups are listed below:</p>
+<style>
+table th:first-of-type {
+    width: 50px;
+}
+table th:nth-of-type(2) {
+    width: 50px;
+}
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">No.</th>
+<th style="text-align:left">symbol</th>
+<th style="text-align:right">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">C<sub>1</sub></td>
+<td style="text-align:right">only the identity and a rotation by 360</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">C<sub>i</sub></td>
+<td style="text-align:right">identity E and a center of inversion i</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">C<sub>S</sub></td>
+<td style="text-align:right">identity E and a plane of reflection 蟽</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">C<sub>n</sub></td>
+<td style="text-align:right">identity E and an n-fold axis of rotation</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">C<sub>nb</sub></td>
+<td style="text-align:right">identity E, an n-fold axis of rotation, and n vertical mirror planes 蟽<sub>v</sub></td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">C<sub>nh</sub></td>
+<td style="text-align:right">identity E, an n-fold axis of rotation, and a horizontal reflection plane 蟽<sub>h</sub> (note that in C<sub>2h</sub>this combination of symmetry elements automatically implies a center of inversion).</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">D<sub>n</sub></td>
+<td style="text-align:right">identity E, an n-fold axis of rotation, and n 2-fold rotations about axes perpendicular to the principal axis.</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">D<sub>nh</sub></td>
+<td style="text-align:right">the same symmetry elements as D<sub>n</sub> with the addition of a horizontal mirror plane.</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">D<sub>nd</sub></td>
+<td style="text-align:right">the same symmetry elements as D<sub>n</sub> with the addition of n dihedral mirror plane.</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">S<sub>n</sub></td>
+<td style="text-align:right">identity and one S<sub>n</sub> axis</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left">T<sub>d</sub></td>
+<td style="text-align:right">all the symmetry elements of a regular tetrahedron, including the identity, 4 C<sub>3</sub> axes, 3 C<sub>2</sub> axes, 6 dihedral mirror planes, and 3 S<sub>4</sub> axes. e.g. CH<sub>4</sub>.</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:left">T</td>
+<td style="text-align:right">the same with T<sub>d</sub> but no planes of reflections.</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">T<sub>h</sub></td>
+<td style="text-align:right">the same with T but contains a centre of inversion.</td>
+</tr>
+<tr>
+<td style="text-align:left">14</td>
+<td style="text-align:left">O<sub>h</sub></td>
+<td style="text-align:right">the group of the regular octahedron e.g. SF<sub>6</sub></td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:left">O</td>
+<td style="text-align:right">the same with O<sub>h</sub> but with no planes of reflections.</td>
+</tr>
+</tbody>
+</table>
+<p>In the meantime, the flowchart shown below provides a step-by-step approach to the problem:<br><img src="/images/point_group_flowchart.png" alt="point group flowchart"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Physics/" rel="tag">#Physics</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/06/vasp-charged-system/" rel="next" title="How does VASP deal with charged systems?">
+                <i class="fa fa-chevron-left"></i> How does VASP deal with charged systems?
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/06/phonopy-installation/" rel="prev" title="How to install phonopy with/without root access?">
+                How to install phonopy with/without root access? <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Yabei Wu" />
+          <p class="site-author-name" itemprop="name">Yabei Wu</p>
+          <p class="site-description motion-element" itemprop="description">reserach, interest, happiness</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yabeiwu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/72981369/" target="_blank" title="douban">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  douban
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wu-ya-bei-88/activities" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.researchgate.net/profile/Yabei_Wu" target="_blank" title="ResearchGate">
+                  
+                    <i class="fa fa-fw fa-researchgate"></i>
+                  
+                  ResearchGate
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symmetry-Operations-and-Elements"><span class="nav-number">2.</span> <span class="nav-text">Symmetry Operations and Elements</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Table-of-symmetry-elements"><span class="nav-number">2.1.</span> <span class="nav-text">Table of symmetry elements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Identity-E"><span class="nav-number">2.2.</span> <span class="nav-text">Identity (E)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reflection-蟽"><span class="nav-number">2.3.</span> <span class="nav-text">Reflection (蟽)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Inversion-Operation-i"><span class="nav-number">2.4.</span> <span class="nav-text">The Inversion Operation (i)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Proper-Rotation-Cn"><span class="nav-number">2.5.</span> <span class="nav-text">Proper Rotation (Cn)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Improper-Rotation-Sn"><span class="nav-number">2.6.</span> <span class="nav-text">Improper Rotation (Sn)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symmetry-Classification-of-Molecules-Point-Groups"><span class="nav-number">3.</span> <span class="nav-text">Symmetry Classification of Molecules - Point Groups</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yabei Wu</span>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+The Total PageView: <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+You are No.:  <span id="busuanzi_value_site_uv"></span> come to this site.
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("NlcEPankXv9zbp9iNbzBeWge-gzGzoHsz", "k4JUg1WeL7mR540U2xcxS2yG");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
