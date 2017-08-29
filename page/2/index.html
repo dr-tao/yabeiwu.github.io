@@ -276,6 +276,244 @@
             
               
                 
+                <a class="post-title-link" href="/2017/08/06/vasp-installation-and-errors/" itemprop="url">
+                  VASP Installations and Some Errors
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
+              2017-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+          
+          
+
+          
+          
+             <span id="/2017/08/06/vasp-installation-and-errors/" class="leancloud_visitors" data-flag-title="VASP Installations and Some Errors">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>We just take the vasp.5.4.4 as an example.</p>
+<ol>
+<li><p>go to your vasp directory, </p>
+<pre><code>copy arch/makefile.include.name makefile.include
+</code></pre></li>
+<li><p>modify makefile.include file according to your system environment by adding</p>
+<pre><code>MKLROOT = /path/to/your/mkl/directory
+</code></pre></li>
+<li><p>make all</p>
+</li>
+</ol>
+<h3 id="Errors-and-Solutions"><a href="#Errors-and-Solutions" class="headerlink" title="Errors and Solutions"></a>Errors and Solutions</h3><ol>
+<li><p>errors as following:</p>
+<pre><code>locproj.o: In function `locproj_mp_lprj_reader_&apos;:
+locproj.f90:(.text+0xa5): undefined reference to `parse_file_C&apos;
+locproj.f90:(.text+0xb9): undefined reference to `free_parser_C&apos;
+locproj.f90:(.text+0x254): undefined reference to `fill_basis_info_C&apos;
+locproj.f90:(.text+0x26e): undefined reference to `free_parser_C&apos;
+make[2]: *** [vasp] Error 1
+make[2]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
+cp: cannot stat ‘vasp’: No such file or directory
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/gpfs/scratch/Software/vasp544/vasp.5.4.4/build/std&apos;
+make: *** [std] Error 2
+</code></pre></li>
+</ol>
+<p>2. </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/06/linux-delete-wrongly/" itemprop="url">
+                  Linux Delete Wrongly
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
+              2017-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+          
+          
+
+          
+          
+             <span id="/2017/08/06/linux-delete-wrongly/" class="leancloud_visitors" data-flag-title="Linux Delete Wrongly">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>误操作执行了万恶的 rm -rf ，删除了一个重要目录，通过 extundelete 恢复了大部分文件。<br>extundelete /dev/sda4 –restore-all<br>记下操作流程：<br>1.下载&amp;编译<br>extundelete 0.2.0<br>需要依赖两个包<br>sudo aptitude install e2fsprogs e2fslibs-dev<br>编译三部曲<br>./configure<br>make<br>make install<br>2.如果分区有挂载，先 umount<br>df -h 查看<br>如果你要恢复的是根目录或者系统目录就只有拿硬盘挂到另外一台电脑上操作了。<br>3.恢复指定分区下所有删除文件<br>extundelete /dev/sda4 –restore-all<br>这里建议恢复所有的被删除的文件，下面会说明。<br>在程序结束后，会在程序的目录下生成一个目录 RECOVERED_FILES<br>这个目录下就是所有被删除的文件，然后你就可以在下面找到你的被删除的目录及文件，但是我有很多文件还是找不到，好在我要找的文件是文本文件，因此，我就借助了 grep 命令来查找。<br>cd RECOVERED_FILES<br>到这个目录下，然后根据你的程序文件里的内容，比如说我要找我的 PartNtfs 类，因为这个文件找不到，因此我这样<br>grep -rHn “PartNtfs” *<br>根据输出内容，我找到了这个文件<br>fjb/.mozilla/firefox/omhuxrnc.default/Cache/CF72B08Ed01<br>用 vim 打开这个文件，果然是我需要的文件，因此把它拷贝出来并重命名。<br>所以在上面说一定要恢复所有被删除的文件，因为 extundelete 有可能会把恢复的文件改名，并放到其它目录中。<br>这里用 grep 来查找还是因此有些恢复的文件变成了隐藏文件，并且恢复的文件非常多，一个一个打开测试会非常麻烦，所以用 grep 来查找就快的多了。<br>最后，我很幸运，把整个工程的源代码文件成功恢复了，并重新编译 －－－ 成功！<br>这里如果 extundelete 没完全恢复你的文件数据，你可以再借助一下 photorec 和 grep 命令来恢复，photorec 可以找回部分数 据，但有些数据会比较凌乱，需要你去拼凑！photorec 在 testdisk 中，你只需安装 testdisk 就会安装了 photorec。<br>哎，虽然做了那么就的数据备份和恢复的软件，一不小心，也会载在这里，所以奉劝各位，一定要小心自己的数据保护和备份自己重要的数据，毕竟硬盘有价，数据无价啊！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/08/06/Barbecue-in-Buffalo/" itemprop="url">
                   Barbecue in Buffalo： Fort Niagara State Park.
                 </a>
@@ -540,7 +778,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -550,7 +788,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
