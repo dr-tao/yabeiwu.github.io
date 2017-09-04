@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Yabei Wu">
 <meta property="og:description" content="This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:  1, root account:if you are a root account, everything becomes much easier for y">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-04T16:44:05.134Z">
+<meta property="og:updated_time" content="2017-09-04T16:49:32.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to install phonopy with&#x2F;without root access?">
 <meta name="twitter:description" content="This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:  1, root account:if you are a root account, everything becomes much easier for y">
@@ -347,7 +347,7 @@
 <pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
 tar -xzf Python-2.7.5.tgz
 cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
+mkdir -p /home/yabeiwu/software/python27 
 ./configure --prefix=&quot;/home/yabeiwu/software/python27&quot;
 make
 make install
@@ -361,18 +361,19 @@ cd setuptools-2.0
 tar -xzf pip-8.1.1.tar.gz
 cd pip-8.1.1
 /home/yabeiwu/software/python27/bin/python setup.py install
-</code></pre><p>4, install related library<br>first goes to /your/path/to/python/bin directory</p>
-<pre><code>cd /home/liudiwei/software/python27/bin/
-./pip install simplejson
-./pip install redis
-./pip install numpy
-./pip install scipy
-./pip install sklearn
-./pip install matplotlib
-</code></pre><p>Because your system already has a python program, so you can rename your python to a different one, by changing the ~/.bashrc file</p>
+</code></pre><p>rename your own pip,</p>
 <pre><code>alais mypip=&apos;/home/yabeiwu/software/python27/bin/pip&apos;
-alias mypython=&apos;/home/yabeiwu/software/python27/bin/python&apos;
-</code></pre><p>5, install phonopy<br>Before install phonopy, we should install the needed python-libraries, we can use the pip tool to complete the  installations:</p>
+</code></pre><p>4, install related library<br>first goes to /your/path/to/python/bin directory</p>
+<pre><code>cd /home/yabeiwu/software/python27/bin/
+mypip install simplejson
+mypip install redis
+mypip install numpy
+mypip install scipy
+mypip install sklearn
+mypip install matplotlib
+</code></pre><p>Because your system already has a python program, so you can rename your python to a different one, by changing the ~/.bashrc file</p>
+<pre><code>alias mypython=&apos;/home/yabeiwu/software/python27/bin/python&apos;
+</code></pre><p>5, install phonopy<br>Before install phonopy, we should make sure you have installed the needed python-libraries, we can use the pip tool to complete the  installations:</p>
 <pre><code>mypip install numpy
 mypip install matplotlib
 mypip install PyYaml
