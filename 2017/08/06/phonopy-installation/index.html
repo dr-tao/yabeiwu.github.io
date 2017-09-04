@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Yabei Wu">
 <meta property="og:description" content="This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:  1, root account:if you are a root account, everything becomes much easier for y">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-05-23T04:37:38.630Z">
+<meta property="og:updated_time" content="2017-09-04T14:57:49.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to install phonopy with&#x2F;without root access?">
 <meta name="twitter:description" content="This will has two situations: 1, root account; 2, without root access. So we will discuss all the situations following:  1, root account:if you are a root account, everything becomes much easier for y">
@@ -352,21 +352,15 @@ mkdir -p /home/liudiwei/software/python27
 make
 make install
 </code></pre><p>2, install setuptools<br>setuptools is prepared for pip program, just using following command:</p>
-<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xzf Python-2.7.5.tgz
-cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
-./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
-make
-make install
+<pre><code>wget --no-check-certificate http://pypi.python.org/packages/source/s/setuptools/setuptools-2.0.tar.gz
+tar -xzvf setuptools-2.0.tar.gz
+cd setuptools-2.0
+/home/liudiwei/software/python27/bin/python setup.py install
 </code></pre><p>3, install pip<br>keep remembering that you should use your own python program.</p>
-<pre><code>wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xzf Python-2.7.5.tgz
-cd Python-2.7.5
-mkdir -p /home/liudiwei/software/python27 
-./configure --prefix=&quot;/home/liudiwei/software/python27&quot;
-make
-make install
+<pre><code>wget --no-check-certificate https://pypi.python.org/packages/41/27/9a8d24e1b55bd8c85e4d022da2922cb206f183e2d18fee4e320c9547e751/pip-8.1.1.tar.gz#md5=6b86f11841e89c8241d689956ba99ed7
+tar -xzf pip-8.1.1.tar.gz
+cd pip-8.1.1
+/home/liudiwei/software/python27/bin/python setup.py install
 </code></pre><p>4, install related library<br>first goes to /your/path/to/python/bin directory</p>
 <pre><code>cd /home/liudiwei/software/python27/bin/
 ./pip install simplejson
@@ -415,16 +409,16 @@ make install
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/06/office-esp-file-support/" rel="next" title="Microsoft Office doesn't support eps format file???">
-                <i class="fa fa-chevron-left"></i> Microsoft Office doesn't support eps format file???
+              <a href="/2017/08/06/vasp-wannier-guide/" rel="next" title="VASP+Wannier90--An Introduction">
+                <i class="fa fa-chevron-left"></i> VASP+Wannier90--An Introduction
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/06/vasp-wannier-guide/" rel="prev" title="VASP+Wannier90--An Introduction">
-                VASP+Wannier90--An Introduction <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/22/phonon-calculation/" rel="prev" title="How to use phonopy to get the phonon frequency?">
+                How to use phonopy to get the phonon frequency? <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -493,7 +487,7 @@ make install
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
