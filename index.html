@@ -1082,6 +1082,115 @@
             
               
                 
+                <a class="post-title-link" href="/2017/08/06/office-esp-file-support/" itemprop="url">
+                  Microsoft Office doesn't support eps format file???
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
+              2017-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+          
+          
+
+          
+          
+             <span id="/2017/08/06/office-esp-file-support/" class="leancloud_visitors" data-flag-title="Microsoft Office doesn't support eps format file???">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="The-reason"><a href="#The-reason" class="headerlink" title="The reason"></a>The reason</h3><p>Due to some security problem, since 04/2017, Microsoft doesn’t support eps file directly put into Word, PowerPoint file. But in our writing, we may need this kind of vector picture, how to fix this?</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>1, ‘ win + R ‘ open the dialog, and then input regedit to open the registry editor.<br><img src="/images/regedit.png" alt="Regedit"><br>2, for 64 operation, go to: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\Common\Security\AllowLists\GraphicsFilterImport, if you don’t have it, just create a new one. And then create a key named “AllowListEnabled”, using the format of REG_QWORD (for 64 operation, don’t use REG_DWORD), with the value of “1”. Next, add eps to your list, creating a new key named “EPSIMP32.FLT”, and set the value to the version of your office.<br><img src="/images/RegistryEditor.png" alt="RegistryEditor"></p>
+<p><strong>Note: How to find the version of your office? using this <a href="https://support.microsoft.com/en-us/help/2479871/security-settings-for-graphic-filters-for-microsoft-office-365" target="_blank" rel="external">link</a></strong> or picture:<br><img src="/images/officeversion.png" alt="officeversion"></p>
+<p>And also you can find more useful information from the link above.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/08/06/VASP-WorkFunction/" itemprop="url">
                   VASP Work Function Calculation
                 </a>
@@ -1162,124 +1271,6 @@ Direct
 ……..
 </code></pre><p> 有用的处理LOCPOT的程序下载：<a href="https://github.com/WMD-group/workfunction" target="_blank" rel="external">https://github.com/WMD-group/workfunction</a></p>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/06/vasp-wannier-guide/" itemprop="url">
-                  VASP+Wannier90--An Introduction
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
-              2017-08-06
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-          
-          
-
-          
-          
-             <span id="/2017/08/06/vasp-wannier-guide/" class="leancloud_visitors" data-flag-title="VASP+Wannier90--An Introduction">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h4><ol>
-<li>wannier90-1.2 compile<br>Go to <a href="http://www.wannier.org/download.html" target="_blank" rel="external">http://www.wannier.org/download.html</a> and download the wannier90-1.2 version, not the newest version.<br>Modify ‘make.sys’ file according to your system, and then<br>make all</li>
-<li><p>Recompile VASP<br>Modify the following parts:</p>
-<p> LIB     = -L../vasp.5.lib -ldmy  \</p>
-<pre><code>../vasp.5.lib/linpack_double.o \
-../wannier90-1.2/libwannier.a $(SCA) (LAPACK)(LAPACK)(BLAS)
-</code></pre><p> CPP    = $(CPP_) -DMPI  -DHOST=\”LinuxIFC\” -DIFC \</p>
-<pre><code>-DCACHE_SIZE=4000 -DPGF90 -Davoidalloc  \
--DMPI_BLOCK=8000 -Duse_collective -DscaLAPACK -DNGZhalf &lt;span style=&quot;color:red&quot;&gt;-DVASP2WANNIER90&lt;/span&gt;
-</code></pre></li>
-</ol>
-<p>Then </p>
-<pre><code>make vasp
-</code></pre><h4 id="Running-Example"><a href="#Running-Example" class="headerlink" title="Running Example"></a>Running Example</h4>
           
         
       
@@ -1566,8 +1557,8 @@ make: *** [std] Error 2
             
               
                 
-                <a class="post-title-link" href="/2017/08/06/sublime-add-right-click-menu/" itemprop="url">
-                  how to add sublime to right click menu?
+                <a class="post-title-link" href="/2017/08/06/USA-East-Travel/" itemprop="url">
+                  北美东部旅行攻略：New York City, Boston, Philadelphia, and Washington DC.
                 </a>
               
             
@@ -1598,7 +1589,7 @@ make: *** [std] Error 2
 
           
           
-             <span id="/2017/08/06/sublime-add-right-click-menu/" class="leancloud_visitors" data-flag-title="how to add sublime to right click menu?">
+             <span id="/2017/08/06/USA-East-Travel/" class="leancloud_visitors" data-flag-title="北美东部旅行攻略：New York City, Boston, Philadelphia, and Washington DC.">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1622,42 +1613,213 @@ make: *** [std] Error 2
       
         
           
-            <p>I found this solution from this <a href="https://my.oschina.net/adairs/blog/466777" target="_blank" rel="external">link</a></p>
-<h3 id="Why-we-should-do-this"><a href="#Why-we-should-do-this" class="headerlink" title="Why we should do this?"></a>Why we should do this?</h3><p>For convenience, i’d like to use sublime sometimes as my texteditor, not as a default one. So it’s better to add sublime to the right click menu. And how to do this?</p>
-<h3 id="Method-1-Installation-recomended"><a href="#Method-1-Installation-recomended" class="headerlink" title="Method 1: Installation (recomended)"></a>Method 1: Installation (recomended)</h3><p>copy the following scipts to the file named “sublime_addright.inf”, and put the file in your directory of sublime. And then right click the file to install it.<br>PS: you should make sure that the file is not hiden in your system due to the format of this file.</p>
-<pre><code>[Version]
-Signature=&quot;$Windows NT$&quot;
+            <ol>
+<li><p>行程前准备事项</p>
+<p> 0.租车<br> 1.护照、驾照<br> 2.车险卡（Car Insurance Card）<br> 3.医疗保险（Medical Insurance Card）<br> 4.Credit card 或Debit card等<br> 5.适当的现金<br> 6.手机充电器、电脑、相机等电子设备<br> 8.适当的衣物、凉鞋、洗漱用品等<br> 9.泳衣、雨伞等<br> 10.必要的药物，如创可贴、肠胃药、防蚊贴等<br> 11.充电宝</p>
+</li>
+<li><p>旅行路线（因为我们需要和朋友在NYC回合，所以路线不是很合理，最合理的要么从Boston一路到washington Dc，或者从washington Dc到Boston。）<br>因为纽约停留时间最长，所以买了city pass，<a href="http://zh.citypass.com/new-york?mv_source=rkg&amp;adpos=1t4&amp;creative=172469463359&amp;device=c&amp;matchtype=b&amp;network=g&amp;gclid=CjwKCAjw2NvLBRAjEiwAF98GMTxHsoFd0YUs0EENRfIyZ-XboZchfS7cbQNpC6NpvS5doBrWQ58CJBoCV5MQAvD_BwE" target="_blank" rel="external">中文售票网站</a>，记得购买人一定要带着id或者护照去第一个景点换票。在第一个景点换票之后，有效期9天。</p>
+</li>
+</ol>
+<style>
+table th:frist-of-type { width: 10px }
+table th:nth-of-type(1) { width: 100px }
+</style>
 
-[DefaultInstall]
-AddReg=SublimeText3
+<table>
+<thead>
+<tr>
+<th style="text-align:left">旅游行程单</th>
+<th style="text-align:left">游玩景点路线</th>
+<th style="text-align:left">吃饭住宿</th>
+<th style="text-align:right">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">第一天</td>
+<td style="text-align:left">开车去纽约，入住，休息，</td>
+<td style="text-align:left">煮泡面；</td>
+<td style="text-align:right">住宿条件还行，能自己做饭比较方便</td>
+</tr>
+<tr>
+<td style="text-align:left">第二天</td>
+<td style="text-align:left">大都会博物馆（3小时）-中央公园-自然历史博物馆（3小时）-Foodtown买菜</td>
+<td style="text-align:left">subway</td>
+<td style="text-align:right">吃饭就快餐，简单快速，景点逛得很累</td>
+</tr>
+<tr>
+<td style="text-align:left">第三天</td>
+<td style="text-align:left">Circle Line Cruise自由女神像-无畏号海陆空博物馆-时代广场-峭石之巅</td>
+<td style="text-align:left">China Xiang（不收小费）+西安名吃</td>
+<td style="text-align:right">两个都不错，<span style="color:blue">西安名吃很推荐</span></td>
+</tr>
+<tr>
+<td style="text-align:left">第四天</td>
+<td style="text-align:left">华尔街-唐人街-帝国大厦</td>
+<td style="text-align:left">西安名吃</td>
+<td style="text-align:right">非常不错，又吃了一次</td>
+</tr>
+<tr>
+<td style="text-align:left">第五天</td>
+<td style="text-align:left">开车去boston-MIT&amp;哈佛-唐人街</td>
+<td style="text-align:left">喜临门；</td>
+<td style="text-align:right">早茶店，挺不错，小费最低15%，给少了会叫你补上；住宿在一家华人，不推荐</td>
+</tr>
+<tr>
+<td style="text-align:left">第六天</td>
+<td style="text-align:left">波士顿公园-自由之路-市政厅-海边-昆西市场</td>
+<td style="text-align:left">Legal Sea Food</td>
+<td style="text-align:right">我们点了Cioppino和casserole，强烈推荐cioppino</td>
+</tr>
+<tr>
+<td style="text-align:left">第七天</td>
+<td style="text-align:left">开车去费城-ReadingMarket-市政厅-自由钟-独立宫-Chinatown</td>
+<td style="text-align:left">林记拉面馆；915 Ridge Avenue, Philadelphia, PA 19107</td>
+<td style="text-align:right">味道还行；住宿强烈推荐</td>
+</tr>
+<tr>
+<td style="text-align:left">第八天</td>
+<td style="text-align:left">宾大校园-开车去华盛顿-白宫-华盛顿纪念碑-二战纪念碑-林肯纪念堂</td>
+<td style="text-align:left">住处煮面条</td>
+<td style="text-align:right">住宿不推荐，脏乱差的典范</td>
+</tr>
+<tr>
+<td style="text-align:left">第九天</td>
+<td style="text-align:left">史密森博物馆-国家美术馆-航空航天博物馆-国会大厦-沃尔玛</td>
+<td style="text-align:left">Reren</td>
+<td style="text-align:right">味道一般，强制18%小费</td>
+</tr>
+<tr>
+<td style="text-align:left">第十天</td>
+<td style="text-align:left">吃过午饭，开车回家</td>
+<td style="text-align:left">路上麦当劳</td>
+<td style="text-align:right">行程结束，还算圆满</td>
+</tr>
+</tbody>
+</table>
+<p>其他信息并展示：<br>1.纽约<br>在纽约玩的时候由于没有计划开车（曼哈顿很难开），所以我们还买了7日地铁票33刀，最后玩完发现其实单买我们也花不了很多，因为坐一趟地铁到了曼哈顿之后，就基本上走路逛逛的，这个根据需要吧。<br>帝国大厦<br><img src="http://i.imgur.com/s8WwyKB.jpg" alt="Imgur"><br>自由女神<br><img src="http://i.imgur.com/ZPapKrN.jpg" alt="Imgur"><br>峭石之巅<br><img src="http://i.imgur.com/QYFMS6b.jpg" alt="Imgur"><br>大都会博物馆<br><img src="http://i.imgur.com/4QupOgV.jpg" alt="Imgur"><br>三一教堂<br><img src="http://i.imgur.com/gZjP59G.jpg" alt="Imgur"></p>
+<p>2.波士顿<br>波士顿我们没有坐地铁，第一天晚上到chinatown直接停在了附近的一个停车场，收费是最高22刀，我们听了三个小时，15刀。第二天直接开到波士顿公园的停车场，最高28刀，我们停了一整个白天。然后走路从波士顿公园一直逛到海边。<br>波士顿市政厅<br><img src="http://i.imgur.com/xd6bt0e.jpg" alt="Imgur"></p>
+<p>3.费城<br>费城景点不多，我们就把车停在了住宿的地方路边，幸运的是路边正好有个车离开，最关键的是住宿离这些景点都不远，特别是chinatown，只需要走5分钟。然后走路去逛Chinatown等景点。<br>费城市政厅<br><img src="http://i.imgur.com/gJa8Usz.jpg" alt="Imgur"></p>
+<p>4.华盛顿<br>华盛顿开车要容易许多，我们开车去到景点附近，停在地下停车场，一天最多20刀，晚上5点以后停进去最多10刀。走路去逛白宫附近还是很合理的。<br>白宫<br><img src="http://i.imgur.com/RPDiRw8.jpg" alt="Imgur"></p>
 
-[SublimeText3]
-hkcr,&quot;*\\shell\\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
-hkcr,&quot;*\\shell\\SublimeText3\\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot; %%*&quot;
-hkcr,&quot;Directory\shell\SublimeText3&quot;,,,&quot;用 SublimeText3 打开&quot;
-hkcr,&quot;*\\shell\\SublimeText3&quot;,&quot;Icon&quot;,0x20000,&quot;%1%\sublime_text.exe, 0&quot;
-hkcr,&quot;Directory\shell\SublimeText3\command&quot;,,,&quot;&quot;&quot;%1%\sublime_text.exe&quot;&quot; &quot;&quot;%%1&quot;&quot;&quot;
-</code></pre><h3 id="Method-2-Modify-the-regitry"><a href="#Method-2-Modify-the-regitry" class="headerlink" title="Method 2: Modify the regitry"></a>Method 2: Modify the regitry</h3><p>Copy the following codes to file named “sublime_addright.reg”, and then double click on this file.<br>PS: you should change the directory of sublime to your own system.</p>
-<pre><code>Windows Registry Editor Version 5.00
-[HKEY_CLASSES_ROOT\*\shell\SublimeText3]
-@=&quot;Edit with Sublime&quot;
-&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
+          
+        
+      
+    </div>
 
-[HKEY_CLASSES_ROOT\*\shell\SublimeText3\command]
-@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
-@=&quot;Edit with Sublime&quot;
-&quot;Icon&quot;=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe,0&quot;
+    
+      
 
-[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3\command]
-@=&quot;D:\\Program Files\\Sublime Text 3\\sublime_text.exe %1&quot;
-</code></pre><h3 id="How-to-delete-the-right-click-menu-if-you-don’t-want-it"><a href="#How-to-delete-the-right-click-menu-if-you-don’t-want-it" class="headerlink" title="How to delete the right click menu if you don’t want it?"></a>How to delete the right click menu if you don’t want it?</h3><p>Copy the following codes to the file named “sublime_delright.reg”, and put it in your sublime directory, and then double click on it.</p>
-<pre><code>Windows Registry Editor Version 5.00
-[-HKEY_CLASSES_ROOT\*\shell\SublimeText3]
-[-HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]
-</code></pre>
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/06/vasp-wannier-guide/" itemprop="url">
+                  VASP+Wannier90--An Introduction
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
+              2017-08-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+          
+          
+
+          
+          
+             <span id="/2017/08/06/vasp-wannier-guide/" class="leancloud_visitors" data-flag-title="VASP+Wannier90--An Introduction">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h4><ol>
+<li>wannier90-1.2 compile<br>Go to <a href="http://www.wannier.org/download.html" target="_blank" rel="external">http://www.wannier.org/download.html</a> and download the wannier90-1.2 version, not the newest version.<br>Modify ‘make.sys’ file according to your system, and then<br>make all</li>
+<li><p>Recompile VASP<br>Modify the following parts:</p>
+<p> LIB     = -L../vasp.5.lib -ldmy  \</p>
+<pre><code>../vasp.5.lib/linpack_double.o \
+../wannier90-1.2/libwannier.a $(SCA) (LAPACK)(LAPACK)(BLAS)
+</code></pre><p> CPP    = $(CPP_) -DMPI  -DHOST=\”LinuxIFC\” -DIFC \</p>
+<pre><code>-DCACHE_SIZE=4000 -DPGF90 -Davoidalloc  \
+-DMPI_BLOCK=8000 -Duse_collective -DscaLAPACK -DNGZhalf &lt;span style=&quot;color:red&quot;&gt;-DVASP2WANNIER90&lt;/span&gt;
+</code></pre></li>
+</ol>
+<p>Then </p>
+<pre><code>make vasp
+</code></pre><h4 id="Running-Example"><a href="#Running-Example" class="headerlink" title="Running Example"></a>Running Example</h4>
           
         
       
@@ -1817,199 +1979,6 @@ mypip install scipy
 </code></pre><p>And then set the phonopy path in your environment:</p>
 <pre><code>export PATH=$PAHT:/home/yabeiwu/software/python27/bin/
 </code></pre><p>After all the installation, have fun in using phonopy.</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/06/USA-East-Travel/" itemprop="url">
-                  北美东部旅行攻略：New York City, Boston, Philadelphia, and Washington DC.
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-08-06T22:07:24-04:00" content="2017-08-06">
-              2017-08-06
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-          
-          
-
-          
-          
-             <span id="/2017/08/06/USA-East-Travel/" class="leancloud_visitors" data-flag-title="北美东部旅行攻略：New York City, Boston, Philadelphia, and Washington DC.">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>行程前准备事项</p>
-<p> 0.租车<br> 1.护照、驾照<br> 2.车险卡（Car Insurance Card）<br> 3.医疗保险（Medical Insurance Card）<br> 4.Credit card 或Debit card等<br> 5.适当的现金<br> 6.手机充电器、电脑、相机等电子设备<br> 8.适当的衣物、凉鞋、洗漱用品等<br> 9.泳衣、雨伞等<br> 10.必要的药物，如创可贴、肠胃药、防蚊贴等<br> 11.充电宝</p>
-</li>
-<li><p>旅行路线（因为我们需要和朋友在NYC回合，所以路线不是很合理，最合理的要么从Boston一路到washington Dc，或者从washington Dc到Boston。）<br>因为纽约停留时间最长，所以买了city pass，<a href="http://zh.citypass.com/new-york?mv_source=rkg&amp;adpos=1t4&amp;creative=172469463359&amp;device=c&amp;matchtype=b&amp;network=g&amp;gclid=CjwKCAjw2NvLBRAjEiwAF98GMTxHsoFd0YUs0EENRfIyZ-XboZchfS7cbQNpC6NpvS5doBrWQ58CJBoCV5MQAvD_BwE" target="_blank" rel="external">中文售票网站</a>，记得购买人一定要带着id或者护照去第一个景点换票。在第一个景点换票之后，有效期9天。</p>
-</li>
-</ol>
-<style>
-table th:frist-of-type { width: 10px }
-table th:nth-of-type(1) { width: 100px }
-</style>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left">旅游行程单</th>
-<th style="text-align:left">游玩景点路线</th>
-<th style="text-align:left">吃饭住宿</th>
-<th style="text-align:right">评价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">第一天</td>
-<td style="text-align:left">开车去纽约，入住，休息，</td>
-<td style="text-align:left">煮泡面；</td>
-<td style="text-align:right">住宿条件还行，能自己做饭比较方便</td>
-</tr>
-<tr>
-<td style="text-align:left">第二天</td>
-<td style="text-align:left">大都会博物馆（3小时）-中央公园-自然历史博物馆（3小时）-Foodtown买菜</td>
-<td style="text-align:left">subway</td>
-<td style="text-align:right">吃饭就快餐，简单快速，景点逛得很累</td>
-</tr>
-<tr>
-<td style="text-align:left">第三天</td>
-<td style="text-align:left">Circle Line Cruise自由女神像-无畏号海陆空博物馆-时代广场-峭石之巅</td>
-<td style="text-align:left">China Xiang（不收小费）+西安名吃</td>
-<td style="text-align:right">两个都不错，<span style="color:blue">西安名吃很推荐</span></td>
-</tr>
-<tr>
-<td style="text-align:left">第四天</td>
-<td style="text-align:left">华尔街-唐人街-帝国大厦</td>
-<td style="text-align:left">西安名吃</td>
-<td style="text-align:right">非常不错，又吃了一次</td>
-</tr>
-<tr>
-<td style="text-align:left">第五天</td>
-<td style="text-align:left">开车去boston-MIT&amp;哈佛-唐人街</td>
-<td style="text-align:left">喜临门；</td>
-<td style="text-align:right">早茶店，挺不错，小费最低15%，给少了会叫你补上；住宿在一家华人，不推荐</td>
-</tr>
-<tr>
-<td style="text-align:left">第六天</td>
-<td style="text-align:left">波士顿公园-自由之路-市政厅-海边-昆西市场</td>
-<td style="text-align:left">Legal Sea Food</td>
-<td style="text-align:right">我们点了Cioppino和casserole，强烈推荐cioppino</td>
-</tr>
-<tr>
-<td style="text-align:left">第七天</td>
-<td style="text-align:left">开车去费城-ReadingMarket-市政厅-自由钟-独立宫-Chinatown</td>
-<td style="text-align:left">林记拉面馆；915 Ridge Avenue, Philadelphia, PA 19107</td>
-<td style="text-align:right">味道还行；住宿强烈推荐</td>
-</tr>
-<tr>
-<td style="text-align:left">第八天</td>
-<td style="text-align:left">宾大校园-开车去华盛顿-白宫-华盛顿纪念碑-二战纪念碑-林肯纪念堂</td>
-<td style="text-align:left">住处煮面条</td>
-<td style="text-align:right">住宿不推荐，脏乱差的典范</td>
-</tr>
-<tr>
-<td style="text-align:left">第九天</td>
-<td style="text-align:left">史密森博物馆-国家美术馆-航空航天博物馆-国会大厦-沃尔玛</td>
-<td style="text-align:left">Reren</td>
-<td style="text-align:right">味道一般，强制18%小费</td>
-</tr>
-<tr>
-<td style="text-align:left">第十天</td>
-<td style="text-align:left">吃过午饭，开车回家</td>
-<td style="text-align:left">路上麦当劳</td>
-<td style="text-align:right">行程结束，还算圆满</td>
-</tr>
-</tbody>
-</table>
-<p>其他信息并展示：<br>1.纽约<br>在纽约玩的时候由于没有计划开车（曼哈顿很难开），所以我们还买了7日地铁票33刀，最后玩完发现其实单买我们也花不了很多，因为坐一趟地铁到了曼哈顿之后，就基本上走路逛逛的，这个根据需要吧。<br>帝国大厦<br><img src="http://i.imgur.com/s8WwyKB.jpg" alt="Imgur"><br>自由女神<br><img src="http://i.imgur.com/ZPapKrN.jpg" alt="Imgur"><br>峭石之巅<br><img src="http://i.imgur.com/QYFMS6b.jpg" alt="Imgur"><br>大都会博物馆<br><img src="http://i.imgur.com/4QupOgV.jpg" alt="Imgur"><br>三一教堂<br><img src="http://i.imgur.com/gZjP59G.jpg" alt="Imgur"></p>
-<p>2.波士顿<br>波士顿我们没有坐地铁，第一天晚上到chinatown直接停在了附近的一个停车场，收费是最高22刀，我们听了三个小时，15刀。第二天直接开到波士顿公园的停车场，最高28刀，我们停了一整个白天。然后走路从波士顿公园一直逛到海边。<br>波士顿市政厅<br><img src="http://i.imgur.com/xd6bt0e.jpg" alt="Imgur"></p>
-<p>3.费城<br>费城景点不多，我们就把车停在了住宿的地方路边，幸运的是路边正好有个车离开，最关键的是住宿离这些景点都不远，特别是chinatown，只需要走5分钟。然后走路去逛Chinatown等景点。<br>费城市政厅<br><img src="http://i.imgur.com/gJa8Usz.jpg" alt="Imgur"></p>
-<p>4.华盛顿<br>华盛顿开车要容易许多，我们开车去到景点附近，停在地下停车场，一天最多20刀，晚上5点以后停进去最多10刀。走路去逛白宫附近还是很合理的。<br>白宫<br><img src="http://i.imgur.com/RPDiRw8.jpg" alt="Imgur"></p>
 
           
         
